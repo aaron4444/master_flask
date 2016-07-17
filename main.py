@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object(DevConfig)
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 
 
@@ -14,4 +14,4 @@ def home():
     return '<h1>Hello World</h1>'
 
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0')

@@ -1,0 +1,13 @@
+create a db image
+
+docker run --name db -e MYSQL_ROOT_PASSWORD=test -d -p 3306:3306 mariadb (last is the image)
+
+[container (db) is instance of image (mariadb)]
+
+[simulate database outside the app, as if its on a different server]
+
+[Interact with mariaDB]
+
+Make a container that connects to container, connect to it and use mysql command to connect to it. (means to connect to original container)
+(--link db is connected and called mysql in mysql-client)
+docker run --name mysql-client -it --link db:mysql
