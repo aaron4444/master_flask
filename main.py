@@ -11,7 +11,7 @@ app.config.from_object(DevConfig)
 
 @app.route('/')
 def home():
-    return '<h1>Hello World</h1>'
+    return '<h1>Hello Batya</h1>'
 
 if __name__=='__main__':
     app.run(host='0.0.0.0')
